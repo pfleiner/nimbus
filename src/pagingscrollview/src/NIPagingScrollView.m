@@ -281,8 +281,8 @@ const CGFloat NIPagingScrollViewDefaultPageMargin = 10;
 
   NSInteger currentVisiblePageIndex = [self currentVisiblePageIndex];
 
-  int firstVisiblePageIndex = boundi(currentVisiblePageIndex - 1, 0, self.numberOfPages - 1);
-  int lastVisiblePageIndex  = boundi(currentVisiblePageIndex + 1, 0, self.numberOfPages - 1);
+  int firstVisiblePageIndex = boundi(currentVisiblePageIndex - 2, 0, self.numberOfPages - 1);
+  int lastVisiblePageIndex  = boundi(currentVisiblePageIndex + 2, 0, self.numberOfPages - 1);
 
   return NSMakeRange(firstVisiblePageIndex, lastVisiblePageIndex - firstVisiblePageIndex + 1);
 }
